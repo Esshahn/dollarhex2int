@@ -6,6 +6,7 @@ This plugin for Sublime Text shows the hex value (typically used e.g. in 8bit as
 
 ## Example
 $F3 -> 243
+
 $0f -> 15
 
 ## Install
