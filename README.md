@@ -1,7 +1,9 @@
 dollarhex2int Preview
 ================
 
-![ScreenShot](https://raw.github.com/Esshahn/dollarhex2int/edit/master/example.jpg)
+![ScreenShot](
+        dollarhex2int/example.jpg
+      )
 
 ## Summary
 This plugin for Sublime Text shows the hex value (typically used e.g. in 8bit assembly language) as integer in the status bar.
