@@ -6,10 +6,13 @@ dollarhex2int Preview
 ## Summary
 This plugin for Sublime Text shows the hex value (typically used e.g. in 8bit assembly language) as integer in the status bar.
 
-## Example
-$F3 -> 243
+## Changelog
+2018-10-12: Additional display of binary
 
-$0f -> 15
+## Example
+$F3 = #243 | %11110011
+
+$0f = #15 | %1111
 
 ## Install
 
