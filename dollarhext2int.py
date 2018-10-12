@@ -34,14 +34,14 @@ class HtointCommand(sublime_plugin.EventListener):
                 isHex = re.findall(r'\$[0-9a-fA-F]+', keyword)
 
                 if isHex:
-                    abc = self.str_to_int(isHex[0].replace('$', '0x'))
-                    statusline.append('{} = #{}'.format(isHex[0], abc)+"  ")
+                    result = self.convert_hex(isHex[0])
+                    statusline.append('{} = {}'.format(isHex[0], result)+"  ")
 
         view.erase_status('Hexcode')
         view.set_status('Hexcode', '{}'.format(", ".join(statusline)))
 
-    def str_to_int(self, s):
-        i = int(s, 16)
-        if i >= 2**23:
-            i -= 2**24
-        return i
+    def convert_hex(self, s):
+        i = int(s.replace('$', '0x'), 16)
+        b = bin(i).replace("0b", "")
+        result = "#" + str(i) + "  |  " + "%" + str(b)
+        return result
